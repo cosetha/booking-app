@@ -132,9 +132,9 @@ input[type=number] {
       <div class="modal-body">
         <div class="row">
             <div class="form-group">                
-                <label for="nomor">Pilih Tanggal : </label>
+                <label for="tanggal_nota">Pilih Tanggal : </label>
                 @if(count($tanggal) > 0)      
-                <select name="mobil" id="mobil" class="form-control">
+                <select name="tanggal_nota" id="tanggal_nota" class="form-control">
                     <option value="" selected disabled>Pilih Tanggal</option>
                     @foreach($tanggal as $m)
                     <option value="{{$m->book_date}}">{{$m->book_date}}</option>
@@ -148,7 +148,7 @@ input[type=number] {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a taget="_blank" href="/home/order/nota/"type="button" class="btn btn-primary">Nota</a>
+        <a taget="_blank" href="/home/order/nota/"type="button" class="btn btn-primary" id="link_nota">Nota</a>
       </div>
     </div>
   </div>
@@ -271,10 +271,11 @@ $(document).ready(function () {
 						Swal.fire({
 							icon: 'success',
 							title: 'Sukses',
-							text: 'Berhasil Menambahkan Mobil',
+							text: 'Berhasil Menambahkan Booking',
 							timer: 1200,
 							showConfirmButton: false
 						});
+                        setTimeout(function () { location.reload(true); }, 1500);
 					}
 				},
 				error: function(err) {
@@ -323,8 +324,8 @@ $(document).ready(function () {
 				}
 			});       
     });
-    $('#layanan').on('change', function () {
-
+    $('#tanggal_nota').on('change', function () {
+        $("a#link_nota").attr("href", '/home/order/nota/?tanggal='+$(this).val());          
     })
 });
 </script>
