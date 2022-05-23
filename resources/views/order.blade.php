@@ -135,6 +135,7 @@ input[type=number] {
                 <label for="nomor">Pilih Tanggal : </label>
                 @if(count($tanggal) > 0)      
                 <select name="mobil" id="mobil" class="form-control">
+                    <option value="" selected disabled>Pilih Tanggal</option>
                     @foreach($tanggal as $m)
                     <option value="{{$m->book_date}}">{{$m->book_date}}</option>
                     @endforeach
