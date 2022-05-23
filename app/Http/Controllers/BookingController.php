@@ -36,8 +36,13 @@ class BookingController extends Controller
         ->join('cars as c', 'c.id', '=', 'b.id_car')
         ->join('users as u', 'u.id', '=', 'b.id_user')
         ->join('services as s', 's.id', '=', 'b.id_service')      
-        ->get();         
-        return view('nota',['services'=>$service,'total'=>$total]);
+        ->get();   
+        if(count($total) == 0 || count($service) == 0){
+            return redirect()->back()->with('success', 'your message,here');   
+        }else{
+            return view('nota',['services'=>$service,'total'=>$total]);
+        }      
+        
     }
 
     /**

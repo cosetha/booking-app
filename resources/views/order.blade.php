@@ -147,7 +147,7 @@ input[type=number] {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <a taget="_blank" href="/home/order/nota?tanggal={{$m->book_date}}"type="button" class="btn btn-primary">Nota</a>
+        <a taget="_blank" href="/home/order/nota/"type="button" class="btn btn-primary">Nota</a>
       </div>
     </div>
   </div>
