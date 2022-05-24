@@ -10,9 +10,9 @@
                         <p class="text-white-50">
                             Sunrise Autos Digiroom merupakan transformasi baru dari website Sunrise Autos yang kini menjadi e-commerce website untuk penjualan mobil, suku cadang, dan aksesoris resmi di Indonesia. Berawal dari jaringan jasa penjualan, perawatan, perbaikan dan penyediaan suku cadang Toyota yang berdiri sejak tahun 1945.
                         </p>
+                        <img class="img-fluid" src="{{asset('assets/img/servismobil.jpg')}}" alt="..." />
                     </div>
                 </div>
-                <img class="img-fluid" src="{{asset('assets/img/servismobil.jpg')}}" alt="..." />
-            </div>
+            </div><br>
         </section>
 @endsection

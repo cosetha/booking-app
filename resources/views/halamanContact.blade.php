@@ -33,16 +33,16 @@
                                     <i class="fas fa-mobile-alt text-primary mb-2"></i>
                                     <h4 class="text-uppercase m-0">Phone</h4>
                                     <hr class="my-4 mx-auto" />
-                                    <div class="small text-black-50">+62123456789</div>
+                                    <div class="small text-black-50">+621234567899</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="social d-flex justify-content-center">
-                        <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="mx-2" href="#!"><i class="fa fa-home"></i></a>
                         <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                         <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
-                    </div>
+                    </div><br>
                 </div>
             </section>
         </div>
