@@ -6,11 +6,7 @@
     <ol class="breadcrumb mb-4">
         <li class="breadcrumb-item active">Dashboard</li>
         <li class="breadcrumb-item active">Booking</li>
-    </ol>
-
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal">
-        Tambah Data
-    </button>
+    </ol>    
     <div class="row min-vh-100">
         <div class="card mb-4 mt-2">
             <div class="card-header">
