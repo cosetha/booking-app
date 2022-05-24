@@ -58,7 +58,7 @@ class CarController extends Controller
      */
     public function show(Car $car)
     {
-        $data = Car::orderBy('id','desc')->get();
+        $data = Car::orderBy('id','desc')->where('id_user',Auth::id())->get();
 
         return Datatables::of($data)->addIndexColumn()
         ->addColumn('aksi', function($row){
