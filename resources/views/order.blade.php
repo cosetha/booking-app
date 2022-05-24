@@ -295,7 +295,7 @@ $(document).ready(function () {
 				processData: false,
 				contentType: false,
 				success: function(response) {					
-
+                    $('#tipe_layanan').empty()
                     for (const element of response) {
                         
                         $('#tipe_layanan').append(`<div class="form-check">
