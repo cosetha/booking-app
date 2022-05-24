@@ -118,7 +118,7 @@ class BookingController extends Controller
      */
     public function show(Booking $booking)
     {
-        $data = DB::table('bookings as b')->select('*','u.name as nama_pelanggan')
+        $data = DB::table('bookings as b')->select('*','u.name as nama_pelanggan','b.id as id_book')
         ->join('cars as c', 'c.id', '=', 'b.id_car')
         ->join('users as u', 'u.id', '=', 'b.id_user')
         ->join('services as s', 's.id', '=', 'b.id_service')
@@ -127,7 +127,7 @@ class BookingController extends Controller
 
         return Datatables::of($data)->addIndexColumn()
         ->addColumn('aksi', function($row){
-            $btn = '<button href="javascript:void(0)" data-id="'.$row->id.'" data-nama="'.$row->name.'"data-status="'.$row->status.'" class="btn btn-info btn-edit mx-2">
+            $btn = '<button href="javascript:void(0)" data-id="'.$row->id_book.'" data-nama="'.$row->name.'"data-status="'.$row->status.'" class="btn btn-info btn-edit mx-2">
             Edit <span class="fa fa-edit"></span>
             </button> &nbsp';
             // $btn = $btn. '<button href="javascript:void(0)" data-id="'.$row->id.'" data-nama="'.$row->name.' "data-status="'.$row->status.'" class="btn btn-danger btn-delete"">
